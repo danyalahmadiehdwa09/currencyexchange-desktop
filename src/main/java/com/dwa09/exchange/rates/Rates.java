@@ -1,11 +1,10 @@
-package com.dwa09.exchange;
+package com.dwa09.exchange.rates;
 
 import com.dwa09.exchange.api.ExchangeService;
 import com.dwa09.exchange.api.model.ExchangeRates;
 import com.dwa09.exchange.api.model.Transaction;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -14,7 +13,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Controller {
+public class Rates {
     public Label buyUsdRateLabel;
     public Label sellUsdRateLabel;
     public TextField lbpTextField;

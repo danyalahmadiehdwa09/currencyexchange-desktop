@@ -8,4 +8,6 @@ module com.dwa09.exchange {
     opens com.dwa09.exchange to javafx.fxml;
     opens com.dwa09.exchange.api.model to gson;
     exports com.dwa09.exchange;
+    exports com.dwa09.exchange.rates;
+    opens com.dwa09.exchange.rates to javafx.fxml;
 }
