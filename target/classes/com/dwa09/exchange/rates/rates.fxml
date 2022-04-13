@@ -49,4 +49,24 @@
             GridPane.halignment="CENTER" GridPane.rowIndex = "14"/>
 
 
+    <TextField fx:id="inputAmount" text = "Enter amount" GridPane.columnIndex="0"
+               GridPane.rowIndex="16"/>
+
+    <Label styleClass="value-label"  fx:id="outputAmount" text="Amount"
+           GridPane.columnIndex="0" GridPane.rowIndex="20"/>
+    <Label styleClass="value"  text="Converted Value" GridPane.columnIndex="0"
+           GridPane.rowIndex="21"/>
+
+    <RadioButton text="USD to LBP" GridPane.columnIndex="0"
+                 GridPane.rowIndex="18" >
+        <toggleGroup>
+            <ToggleGroup fx:id="conversionType"/>
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton text="LBP to USD" toggleGroup="$conversionType" GridPane.columnIndex="1"
+                 GridPane.rowIndex="18"/>
+    <Button text="Convert" onAction="#convert" GridPane.columnSpan="2"
+            GridPane.halignment="CENTER" GridPane.rowIndex = "19"/>
+
+
 </GridPane>
