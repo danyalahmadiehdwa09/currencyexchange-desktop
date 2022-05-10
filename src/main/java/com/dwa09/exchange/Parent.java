@@ -13,6 +13,11 @@ public class Parent implements Initializable, OnPageCompleteListener{
     public Button loginButton;
     public Button registerButton;
     public Button logoutButton;
+    public Button requestButton;
+    public Button walletButton;
+    public Button insightButton;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateNavigation();
@@ -32,6 +37,16 @@ public class Parent implements Initializable, OnPageCompleteListener{
     }
     public void registerSelected() {
         swapContent(Section.REGISTER);
+    }
+    public void insightSelected() {
+        swapContent(Section.INSIGHT);
+    }
+    public void walletSelected() {
+        swapContent(Section.WALLET);
+    }
+
+    public void requestSelected() {
+        swapContent(Section.REQUESTS);
     }
     public void logoutSelected() {
         Authentication.getInstance().deleteToken();
@@ -56,7 +71,11 @@ public class Parent implements Initializable, OnPageCompleteListener{
         RATES,
         TRANSACTIONS,
         LOGIN,
+        REQUESTS,
+        INSIGHT,
+        WALLET,
         REGISTER;
+
         public boolean doesComplete() {
             return switch (this) {
                 case LOGIN, REGISTER -> true;
@@ -73,6 +92,12 @@ public class Parent implements Initializable, OnPageCompleteListener{
                         "/com/dwa09/exchange/login/login.fxml";
                 case REGISTER ->
                         "/com/dwa09/exchange/register/register.fxml";
+                case REQUESTS ->
+                        "/com/dwa09/exchange/requests/requests.fxml";
+                case INSIGHT ->
+                        "/com/dwa09/exchange/insight/insight.fxml";
+                case WALLET ->
+                        "/com/dwa09/exchange/wallet/wallet.fxml";
                 default -> null;
             };
         }
@@ -89,6 +114,12 @@ public class Parent implements Initializable, OnPageCompleteListener{
         registerButton.setVisible(!authenticated);
         logoutButton.setManaged(authenticated);
         logoutButton.setVisible(authenticated);
+        requestButton.setVisible(authenticated);
+        requestButton.setManaged(authenticated);
+        insightButton.setVisible(true);
+        insightButton.setManaged(true);
+        walletButton.setVisible(authenticated);
+        walletButton.setManaged(authenticated);
     }
 
 }

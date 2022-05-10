@@ -13,6 +13,8 @@
         <VBox spacing="5" styleClass="nav-container" fillWidth="true">
             <Button styleClass="nav-button" text="Exchange Rate"
                     onAction="#ratesSelected"/>
+            <Button fx:id="insightButton" styleClass="nav-button"
+                    text="Insight" onAction="#insightSelected"/>
             <Button fx:id="transactionButton" styleClass="nav-button"
                     text="Transactions"
                     onAction="#transactionsSelected"/>
@@ -20,6 +22,12 @@
                     text="Login" onAction="#loginSelected"/>
             <Button fx:id="registerButton" styleClass="nav-button"
                     text="Register" onAction="#registerSelected"/>
+            <Button fx:id="walletButton" styleClass="nav-button"
+                    text="Wallet" onAction="#walletSelected"/>
+            <Button fx:id="requestButton" styleClass="nav-button"
+                    text="Requests" onAction="#requestSelected"/>
+
+
             <Button fx:id="logoutButton" styleClass="nav-button" text="Log
 out" onAction="#logoutSelected"/>
         </VBox>

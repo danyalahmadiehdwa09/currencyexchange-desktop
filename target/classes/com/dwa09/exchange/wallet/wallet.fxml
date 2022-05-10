@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="com.dwa09.exchange.wallet.Wallet1"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10"
+          vgap="10"
+          stylesheets="@wallet.css"
+          prefHeight="475.0"
+          prefWidth="600.0">
+    <Label styleClass="header" text="Wallet" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="4" />
+    <Label styleClass="value" text="USD in Wallet" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <Label fx:id="usdfunds" styleClass="value-label" text="USD" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <Label styleClass="value" text="LBP in Wallet" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label fx:id="lbpfunds" styleClass="value-label" text="LBP" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <TextField fx:id="amountToAdd" text="Enter amount" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+
+    <RadioButton text="USD" GridPane.columnIndex="3" GridPane.rowIndex="6">
+        <toggleGroup>
+            <ToggleGroup fx:id="walletType" />
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton text="LBP" toggleGroup="$walletType" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+    <Button onAction="#addToWallet" text="+" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6"  />
+
+    </GridPane>

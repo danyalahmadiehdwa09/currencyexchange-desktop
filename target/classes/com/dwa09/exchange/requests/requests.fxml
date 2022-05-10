@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.8453815261044177" prefHeight="475.0" prefWidth="600.0" stylesheets="@requests.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dwa09.exchange.requests.Requests">
+    <GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml">
+
+        <Label styleClass="header" text="Click on Request" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="8" />
+
+        <Button onAction="#commitRequest" text="Accept" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+
+        <Button onAction="#removeRequest" text="Decline" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+        <Separator orientation="HORIZONTAL" GridPane.RowIndex="11" GridPane.columnIndex="0" GridPane.columnSpan="4" />
+
+        <Label styleClass="header" text="Make Request" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="12" />
+        <Label fx:id="usdAmount" styleClass="value-label" text="Usd Amount" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+        <TextField fx:id="usdtext" text="Enter usd amount" GridPane.columnIndex="0" GridPane.rowIndex="14" />
+
+        <Label fx:id="lbpAmount" styleClass="value-label" text="Lbp Amount" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+        <TextField fx:id="lbptext" text="Enter lbp amount" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+
+        <RadioButton text="Buy USD" GridPane.columnIndex="3" GridPane.rowIndex="13">
+            <toggleGroup>
+                <ToggleGroup fx:id="requestType" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton text="Sell USD" toggleGroup="$requestType" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+        <ComboBox fx:id="usersList" GridPane.columnIndex="3" GridPane.rowIndex="14" />
+        <Button onAction="#addRequest" text="Send a Trade Request" GridPane.columnSpan="4" GridPane.halignment="CENTER"  GridPane.rowIndex="15" />
+
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints maxWidth="127.99999999999997" minWidth="71.40000000000003" prefWidth="71.40000000000003" />
+         <ColumnConstraints maxWidth="74.39999999999998" minWidth="34.19999999999999" prefWidth="74.39999999999998" />
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+
+
+    </GridPane>
+
+
+<TableView fx:id="requestsTable" AnchorPane.bottomAnchor="4" AnchorPane.leftAnchor="4" AnchorPane.rightAnchor="4" AnchorPane.topAnchor="4">
+<columns>
+    <TableColumn fx:id="id" prefWidth="41.59999694824216" text="Request ID" />
+    <TableColumn fx:id="usdamount" prefWidth="81.59999694824216" text="USD Amount" />
+    <TableColumn fx:id="lbpamount" prefWidth="79.20001983642578" text="LBP Amount" />
+    <TableColumn fx:id="usd_to_lbp" minWidth="0.0" prefWidth="44.79998779296875" text="USD to LBP?" />
+    <TableColumn fx:id="user_id" prefWidth="109.0" text="User" />
+    <TableColumn fx:id="added_date" prefWidth="141.79995727539062" text="Transaction Date" />
+</columns>
+</TableView>
+        </SplitPane>

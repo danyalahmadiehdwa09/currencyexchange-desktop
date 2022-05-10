@@ -10,3 +10,5 @@
 .value {
     -fx-font-size: 18;
 }
+.button
+{-fx-background-color: skyblue}
